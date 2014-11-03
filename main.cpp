@@ -16,9 +16,9 @@ void agregarASet(set<int> *mi_set,int valor)
 //devuelve true si valor (dado) existe en mi_set (dado)
 bool existe(set<int> mi_set,int valor)
 {
-    for(set<int>::iterator i = mi_set.begin();i!=mi_set.end();i++)
+    for(set<int>::iterator i = mi_set.begin();i!=mi_set.end();i++)//ciclo para mover el set
     {
-       if(valor==*i)
+       if(valor==*i)//si encuentra el valor para el ciclo y regresa true
         {
             return true;
         }
@@ -84,6 +84,25 @@ set<int> getUnion(set<int> mi_set1, set<int> mi_set2)
 //(mi_set contiene todos los valores de mi_sub_set)
 bool esSubConjunto(set<int> mi_set, set<int> mi_sub_set)
 {
+    int cont_rep=0;//Contador de las repeticiones de igualdad entre los 2 conjuntos.
+
+    for(set<int>::iterator i = mi_set.begin();i!=mi_set.end();i++)//ciclo del set
+        {
+            for(set<int>::iterator j = mi_sub_set.begin();j!=mi_sub_set.end();j++)//ciclo del subset
+            {
+                if(*i==*j)//cada vez que encuetre valores iguales el contador de repeticiones aumenta 1
+                {
+                   cont_rep++;
+                }
+            }
+
+        }
+
+        if(cont_rep==mi_sub_set.size())//Para que sea un conjunto todos los valores del subset tienen que estar en el set
+        {                              // Para que sea un subconjunto, si la cantidad de valores iguales es la misma del tamanio del subset,
+                                       // Eso indica que el subset es contenido en el set. lo cual lo hace un subconjunto.
+            return true;
+        }
     return false;
 }
 

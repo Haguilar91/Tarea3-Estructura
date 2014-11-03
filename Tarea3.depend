@@ -47,3 +47,19 @@
 	<set>
 	<map>
 
+1415028347 source:c:\users\hector aguilar\documents\github\tarea3-estructura\tarea3-estructura\evaluador.cpp
+	"Evaluador.h"
+
+1415028347 c:\users\hector aguilar\documents\github\tarea3-estructura\tarea3-estructura\evaluador.h
+	<iostream>
+	<vector>
+	<set>
+	<map>
+
+1415035641 source:c:\users\hector aguilar\documents\github\tarea3-estructura\tarea3-estructura\main.cpp
+	"Evaluador.h"
+	<iostream>
+	<vector>
+	<set>
+	<map>
+
